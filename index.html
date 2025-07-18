@@ -5,103 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anthony Quijada</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Outfit', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #f4f4f4;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 40px;
-      border-radius: 20px;
-      backdrop-filter: blur(12px);
-      max-width: 700px;
-      width: 90%;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      animation: fadeIn 1.2s ease-in-out;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      color: #ffffff;
-    }
-
-    .subtitle {
-      text-align: center;
-      font-size: 1.2rem;
-      color: #a5c9ff;
-      margin-bottom: 30px;
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      color: #aad8ff;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #aad8ff55;
-      padding-bottom: 5px;
-    }
-
-    p, li {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: #e0e0e0;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #aaa;
-      margin-top: 20px;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <div class="card">
-    <h1>Anthony Quijada</h1>
-    <p class="subtitle">Computer Science Student · Cybersecurity Minor · Tech Enthusiast</p>
+    <h1 class="fade-in">Anthony Quijada</h1>
+    <p class="subtitle slide-in">Computer Science Student · Cybersecurity Minor · Tech Enthusiast</p>
 
-    <section>
+    <section class="fade-up">
       <h2>About Me</h2>
       <p>
         I'm a student studying Computer Science with a minor in Cybersecurity. I like building things with code, exploring new technologies, and experimenting with ideas that mix creativity and logic. Outside of tech, I enjoy gaming and learning new skills.
       </p>
     </section>
 
-    <section>
+    <section class="fade-up">
       <h2>Interests</h2>
       <ul>
         <li>Software Development</li>
@@ -111,7 +30,7 @@
       </ul>
     </section>
 
-    <footer>
+    <footer class="fade-in">
       &copy; 2025 Anthony Quijada
     </footer>
   </div>

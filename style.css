@@ -1,14 +1,23 @@
-/* Background gradient */
+/* Stronger pink + blue vaporwave gradient background with animation */
 body {
   margin: 0;
   font-family: 'Manrope', sans-serif;
-  background: linear-gradient(135deg, #fcd5ce, #a2d2ff);
+  background: linear-gradient(-45deg, #fcd5ce, #6499e9, #fcd5ce, #4264d0);
+  background-size: 400% 400%;
+  animation: gradientShift 18s ease infinite;
   min-height: 150vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 60px 20px;
   color: #222;
+}
+
+/* Background animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Glassmorphism card */
@@ -24,16 +33,42 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Neon glow effect */
 h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
-  color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px #fff,
+               0 0 10px #ff8fa3,
+               0 0 20px #ff8fa3,
+               0 0 40px #ff8fa3,
+               0 0 80px #ff8fa3;
+  animation: glowPulse 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 5px #fff,
+                 0 0 10px #ff8fa3,
+                 0 0 20px #ff8fa3,
+                 0 0 40px #ff8fa3,
+                 0 0 80px #ff8fa3;
+  }
+  to {
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #ffd6e0,
+                 0 0 30px #ffb6c1,
+                 0 0 60px #ffb6c1,
+                 0 0 100px #ffb6c1;
+  }
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #444;
+  color: #eee;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 h2 {
@@ -62,14 +97,15 @@ footer {
   text-align: center;
 }
 
-/* Overlay for extra TV Girl softness */
+/* Extra dreamy overlay */
 .overlay {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.07) 0%, transparent 70%);
   pointer-events: none;
   z-index: -1;
 }
+
 
 
 

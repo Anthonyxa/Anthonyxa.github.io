@@ -1,10 +1,9 @@
-/* Animated dreamy background */
 body {
   margin: 0;
   font-family: 'Manrope', sans-serif;
   background: linear-gradient(-45deg, #fcd5ce, #6499e9, #fcd5ce, #4264d0);
-  background-size: 400% 400%;
-  animation: gradientShift 18s ease infinite;
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
   min-height: 150vh;
   overflow-x: hidden;
   display: flex;
@@ -97,18 +96,24 @@ footer {
   text-align: center;
 }
 
-/* Floating sparkles */
+/* Sparkle background overlay */
 .sparkle-bg::before {
   content: '';
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
   background: url('https://raw.githubusercontent.com/JulianPrieber/glitter-background/main/glitter2.gif') repeat;
-  opacity: 0.15;
+  opacity: 0.2;
   pointer-events: none;
   z-index: 0;
+  animation: sparkleMove 60s linear infinite;
 }
 
-/* Floating shapes (hearts/stars/etc) */
+@keyframes sparkleMove {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+/* Floating particles */
 .floaters {
   position: fixed;
   top: 0; left: 0;
@@ -119,21 +124,23 @@ footer {
 
 .floater {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  animation: float 18s linear infinite;
+  animation: float 15s linear infinite;
 }
 
 .floater1 { top: 90%; left: 20%; animation-delay: 0s; }
-.floater2 { top: 95%; left: 50%; animation-delay: 5s; }
-.floater3 { top: 100%; left: 75%; animation-delay: 10s; }
+.floater2 { top: 95%; left: 50%; animation-delay: 3s; }
+.floater3 { top: 100%; left: 75%; animation-delay: 6s; }
+.floater4 { top: 85%; left: 30%; animation-delay: 9s; }
+.floater5 { top: 92%; left: 60%; animation-delay: 12s; }
 
 @keyframes float {
   0% { transform: translateY(0) scale(1); opacity: 0; }
   10% { opacity: 1; }
-  100% { transform: translateY(-150vh) scale(1.4); opacity: 0; }
+  100% { transform: translateY(-150vh) scale(1.6); opacity: 0; }
 }
 
 

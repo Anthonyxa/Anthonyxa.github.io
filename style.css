@@ -1,127 +1,74 @@
+/* Background gradient */
 body {
   margin: 0;
-  font-family: 'Rubik', sans-serif;
-  color: #222;
+  font-family: 'Manrope', sans-serif;
+  background: linear-gradient(135deg, #fcd5ce, #a2d2ff);
+  min-height: 150vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-height: 100vh;
-  overflow-x: hidden;
-  position: relative;
-  background: #fff;
+  padding: 60px 20px;
+  color: #222;
 }
 
+/* Glassmorphism card */
 .card {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 60px 50px;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  max-width: 820px;
-  margin-top: 60px;
-  margin-bottom: 120px;
-  width: 90%;
-  z-index: 2;
-  position: relative;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 h1 {
   font-size: 2.8rem;
-  margin-bottom: 12px;
-  color: #d63384;
+  margin-bottom: 10px;
+  color: #1a1a1a;
 }
 
-.typing {
-  font-size: 1.2rem;
-  color: #555;
-  height: 1.5em;
+.subtitle {
+  font-size: 1.1rem;
+  color: #444;
   margin-bottom: 30px;
 }
 
 h2 {
-  color: #5c4d7d;
-  border-bottom: 2px solid #ffb6c1;
-  padding-bottom: 6px;
-  margin-top: 40px;
+  margin-top: 30px;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #ffc8dd;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #333;
+}
+
+p, ul {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 15px 0;
 }
 
 ul {
   padding-left: 20px;
-  line-height: 1.7;
-}
-
-p, li {
-  font-size: 1.05rem;
-  line-height: 1.8;
 }
 
 footer {
-  margin-top: 60px;
-  color: #aaa;
+  margin-top: 40px;
+  color: #666;
   font-size: 0.9rem;
   text-align: center;
 }
 
-#toggle-mode {
+/* Overlay for extra TV Girl softness */
+.overlay {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 16px;
-  background: #d63384;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
-  z-index: 3;
-  transition: 0.3s;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
 }
 
-#toggle-mode:hover {
-  background: #fd75a4;
-}
-
-/* Animated dreamy gradient */
-.animated-bg {
-  position: fixed;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(-45deg, #fcbad3, #a2d2ff, #d0bfff, #ffd6ff);
-  background-size: 400% 400%;
-  animation: gradientMove 18s ease infinite;
-  z-index: 0;
-  top: -50%;
-  left: -50%;
-  filter: blur(80px);
-  opacity: 0.6;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Dark Mode */
-body.dark {
-  color: #f2f2f2;
-  background: #111;
-}
-
-body.dark .card {
-  background: rgba(34, 34, 34, 0.95);
-}
-
-body.dark h2 {
-  color: #ffb6c1;
-  border-color: #90e0ef;
-}
-
-body.dark #toggle-mode {
-  background: #a2d2ff;
-  color: #000;
-}
-
-.spacer {
-  height: 120px;
-}
 

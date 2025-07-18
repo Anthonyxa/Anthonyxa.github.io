@@ -4,37 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anthony Quijada</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <div class="animated-bg"></div>
+
+  <button id="toggle-mode">toggle mode</button>
+
   <div class="card">
-    <h1 class="fade-in">Anthony Quijada</h1>
-    <p class="subtitle slide-in">Computer Science Student · Cybersecurity Minor · Tech Enthusiast</p>
+    <h1>Anthony Quijada</h1>
+    <p class="typing">Computer Science Student · Cybersecurity Minor · Tech Enthusiast</p>
 
-    <section class="fade-up">
-      <h2>About Me</h2>
-      <p>
-        I'm a student studying Computer Science with a minor in Cybersecurity. I like building things with code, exploring new technologies, and experimenting with ideas that mix creativity and logic. Outside of tech, I enjoy gaming and learning new skills.
-      </p>
-    </section>
+    <h2>About Me</h2>
+    <p>
+      I’m a college student into tech, games, and creative projects. I study Computer Science with a minor in Cybersecurity, and I like building things that are both useful and fun.
+    </p>
+    <p>
+      I made this site to keep things simple and reflect who I am — no extra hype. Just vibes, code, and whatever I feel like sharing.
+    </p>
 
-    <section class="fade-up">
-      <h2>Interests</h2>
-      <ul>
-        <li>Software Development</li>
-        <li>Cybersecurity Concepts</li>
-        <li>Game Design</li>
-        <li>Technology & Innovation</li>
-      </ul>
-    </section>
+    <h2>Interests</h2>
+    <ul>
+      <li>Software & App Development</li>
+      <li>Cybersecurity Basics</li>
+      <li>Game Design</li>
+      <li>Technology & Innovation</li>
+      <li>Digital Aesthetics & Retro Media</li>
+      <li>Gaming + Building Creative Tools</li>
+    </ul>
 
-    <footer class="fade-in">
-      &copy; 2025 Anthony Quijada
+    <h2>Stuff I Might Add Here</h2>
+    <p>
+      Maybe a blog. Maybe random updates. Or maybe just leave it like this forever.
+    </p>
+    <p>
+      Either way, this is my little space online.
+    </p>
+
+    <div class="spacer"></div>
+
+    <footer>
+      &copy; 2025 Anthony Quijada — built with chill
     </footer>
   </div>
+
+  <script>
+    const text = document.querySelector('.typing');
+    const originalText = text.textContent;
+    text.textContent = '';
+    let i = 0;
+    const typeInterval = setInterval(() => {
+      if (i < originalText.length) {
+        text.textContent += originalText.charAt(i);
+        i++;
+      } else {
+        clearInterval(typeInterval);
+      }
+    }, 40);
+
+    const toggle = document.getElementById("toggle-mode");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
 </body>
 </html>
+
 
 

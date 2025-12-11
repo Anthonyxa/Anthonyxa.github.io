@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+
   <script>
     function toggleMusic() {
       const musicBox = document.getElementById("music-box");
@@ -18,12 +19,16 @@
 <body>
 
   <div class="sparkle-bg"></div>
+
   <div class="floaters">
     <div class="floater floater1"></div>
     <div class="floater floater2"></div>
     <div class="floater floater3"></div>
     <div class="floater floater4"></div>
     <div class="floater floater5"></div>
+
+    <div class="floater-circle circle1"></div>
+    <div class="floater-circle circle2"></div>
   </div>
 
   <div class="now-playing">
@@ -35,22 +40,27 @@
   </div>
 
   <div class="card">
-    <h1>Anthony Quijada</h1>
+
+    <h1 class="shimmer-title">Anthony Quijada</h1>
     <p class="subtitle">THIS IS YO BOY ANTHONY</p>
 
-    <section>
+    <section class="glass-section">
       <h2>about me</h2>
+      <div class="divider"></div>
+
       <p>
-        i'm a cs student who likes building random stuff, messing with tech, and figuring things out by making random side projects.  
+        i'm a <span class="highlight">cs student</span> who likes building random stuff, messing with tech, and figuring things out by making random side projects.  
         i’m usually either coding, gaming, watching anime, or deep in some random rabbit hole about the world.  
-        i’ve always been curious I'm into space, astronomy, physics, all that.  
+        i’ve always been curious — i'm into space, astronomy, physics, all that.  
         i watch a lot of shows, listen to music like TV Girl and similar vibes, and read just enough to feel like i’m learning something.  
         i try to improve a little every day.
       </p>
     </section>
 
-    <section>
+    <section class="glass-section">
       <h2>interests</h2>
+      <div class="divider"></div>
+
       <ul>
         <li>coding things that feel fun or useful</li>
         <li>cybersecurity (just getting into it)</li>
@@ -66,17 +76,22 @@
       </ul>
     </section>
 
-    <section>
+    <section class="glass-section">
       <h2>why did i make this website</h2>
+      <div class="divider"></div>
+
       <p>
         maybe i’ll post something here. maybe not. depends how i feel.  
         for now it just looks cool and feels like mine.
       </p>
     </section>
 
-    <section>
+    <section class="glass-section">
       <h2>music i like</h2>
+      <div class="divider"></div>
+
       <button onclick="toggleMusic()">show / hide</button>
+
       <div id="music-box" style="display: none; margin-top: 15px;">
         <iframe style="border-radius:12px; margin-top:10px;" 
           src="https://embed.spotify.com/?uri=spotify:track:2K7xn816oNHJZ0aVqdQsha?si=d16e11ef0a104380" 
@@ -86,8 +101,10 @@
       </div>
     </section>
 
-    <section>
+    <section class="glass-section">
       <h2>contact me</h2>
+      <div class="divider"></div>
+
       <p>
         discord: <strong>anthonyza</strong><br />
         steam: <strong>anthoniza1</strong>

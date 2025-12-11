@@ -14,8 +14,9 @@
     }
   </script>
 </head>
+
 <body>
-  <!-- sparkles + floaters -->
+
   <div class="sparkle-bg"></div>
   <div class="floaters">
     <div class="floater floater1"></div>
@@ -25,7 +26,6 @@
     <div class="floater floater5"></div>
   </div>
 
-  <!-- now playing bar -->
   <div class="now-playing">
     <img src="https://i.redd.it/scott-pilgrim-and-tv-girl-album-fusion-was-inspired-to-do-v0-2mbkrnaos4sb1.jpg?width=1000&format=pjpg&auto=webp&s=99c5c077b78f825a20551c20b8361e9231e423ee" alt="TV Girl Album">
     <div class="track-info">
@@ -34,7 +34,6 @@
     </div>
   </div>
 
-  <!-- main card -->
   <div class="card">
     <h1>Anthony Quijada</h1>
     <p class="subtitle">i code, i game, i learn — kinda figuring it all out as i go</p>
@@ -59,7 +58,7 @@
         <li>anime, TV shows, reading, and YouTube rabbit holes</li>
         <li>music with a vibe (like TV Girl, Mac DeMarco, The Neighbourhood, Arctic Monkeys, etc.)</li>
         <li>i also recently got into hardware (arduino and raspberry pi stuff)</li>
-        <li>Learning to play Counter Strike(Anthonyza,Farell,biggie chesse, thundercock, zedy44, wisp, zappa clappa, thanos, batman, Ohnedeeb and Gurmin(honorific mention to jeff))</li>
+        <li>Learning to play Counter Strike (Anthonyza, Farell, biggie chesse, thundercock, zedy44, wisp, zappa clappa, thanos, batman, Ohnedeeb and Gurmin — honorific mention to jeff)</li>
         <li>Former HP sponsored competitive coder for hackathons</li>
         <li>i play chess from time to time (working toward a CM title currently)</li>
         <li>currently saving up for a new computer 🙏</li>
@@ -79,9 +78,6 @@
       <h2>music i like</h2>
       <button onclick="toggleMusic()">show / hide</button>
       <div id="music-box" style="display: none; margin-top: 15px;">
-        <ul>
-        
-        </ul>
         <iframe style="border-radius:12px; margin-top:10px;" 
           src="https://embed.spotify.com/?uri=spotify:track:2K7xn816oNHJZ0aVqdQsha?si=d16e11ef0a104380" 
           width="100%" height="80" frameborder="0" 
@@ -98,12 +94,18 @@
       </p>
     </section>
   </div>
+
+  <div class="chatbox">
+    <div id="chat-log" class="chat-log"></div>
+
+    <div class="chat-input-row">
+      <input id="chat-input" class="chat-input" placeholder="Ask me something..." />
+      <button onclick="sendMessage()" class="chat-send">Send</button>
+    </div>
+
+    <button onclick="startQuiz()" class="quiz-btn">How Well Do You Know Me?</button>
+  </div>
+
+  <script src="chat.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-

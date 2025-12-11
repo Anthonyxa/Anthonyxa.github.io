@@ -1,10 +1,12 @@
 let quizMode = false;
 let quizScore = 0;
 
-async function sendMessage() {
+async function sendMessage(forcedMessage = null) {
   const log = document.getElementById("chat-log");
   const input = document.getElementById("chat-input");
-  const message = input.value.trim();
+
+  // Support forced messages (like "start quiz")
+  const message = forcedMessage ? forcedMessage.trim() : input.value.trim();
   if (!message) return;
 
   log.innerHTML += `<div><strong>You:</strong> ${message}</div>`;
@@ -26,11 +28,8 @@ async function sendMessage() {
   const data = await response.json();
   const answer = data.answer;
 
-  
-  if (quizMode) {
-    if (answer.toLowerCase().includes("correct")) {
-      quizScore++;
-    }
+  if (quizMode && answer.toLowerCase().includes("correct")) {
+    quizScore++;
   }
 
   log.innerHTML += `<div><strong>AI:</strong> ${answer}</div>`;
@@ -44,6 +43,6 @@ function startQuiz() {
   const log = document.getElementById("chat-log");
   log.innerHTML += `<div><strong>AI:</strong> Starting "How Well Do You Know Anthony?" quiz! Answer each question.</div>`;
 
-
+  // Actually trigger quiz in backend
   sendMessage("start quiz");
 }

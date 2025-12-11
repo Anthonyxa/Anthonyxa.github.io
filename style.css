@@ -96,7 +96,6 @@ footer {
   text-align: center;
 }
 
-/* sparkles */
 .sparkle-bg::before {
   content: '';
   position: fixed;
@@ -113,7 +112,6 @@ footer {
   to { background-position: 1000px 1000px; }
 }
 
-/* floaters */
 .floaters {
   position: fixed;
   top: 0; left: 0;
@@ -143,7 +141,6 @@ footer {
   100% { transform: translateY(-150vh) scale(1.6); opacity: 0; }
 }
 
-/* now playing bar */
 .now-playing {
   position: fixed;
   top: 20px;
@@ -176,4 +173,66 @@ footer {
   color: #444;
 }
 
+/* Chatbox Styling */
 
+.chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 330px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-log {
+  max-height: 260px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  padding-right: 5px;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 5px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat-send {
+  background: #6499e9;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.quiz-btn {
+  width: 100%;
+  background: #ff8fa3;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+.quiz-btn:hover {
+  filter: brightness(1.1);
+}
